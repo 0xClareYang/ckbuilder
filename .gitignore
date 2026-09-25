@@ -1,0 +1,62 @@
+# Secrets, private keys, mnemonics, and wallet data
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+*.wallet
+private-key*
+private_key*
+mnemonic*
+seed-phrase*
+seed_phrase*
+secrets/
+keys/
+keystore/
+wallets/
+
+# Node.js dependencies and generated output
+node_modules/
+dist/
+build/
+coverage/
+.npm/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local CKB / OffCKB Devnet data
+.ckb/
+.offckb/
+ckb-data/
+offckb-data/
+devnet/
+data/
+logs/
+*.log
+
+# Caches and temporary files
+.cache/
+.parcel-cache/
+.turbo/
+.temp/
+.tmp/
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# macOS and editor files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.idea/
+.vscode/
