@@ -1,15 +1,20 @@
-# CKBuilder Learning Log
+# CKBuilder Learning Repository
 
-**姓名：** Clare Yang
+**Name:** Clare Yang
 
-## 说明
+This repository documents my CKBuilder onboarding, CKB technical learning and practical progress.
 
-该仓库用于记录我的 CKBuilder onboarding、CKB 技术学习和实践过程。
+## Weekly Reports
 
-## 当前进度
+- [Week 1 — OffCKB Setup and Test Contract Deployment](reports/week-01.md)
 
-已使用 OffCKB 启动本地 CKB devnet，部署 `hello-world` 测试合约，部署交易状态为 `committed`，测试全部通过。
+## Current Progress
 
-## 下一步
+I have used OffCKB to start a local CKB Devnet, deploy the `hello-world.bc` test contract, confirm the deployment transaction as `committed` and pass the included tests.
 
-继续学习 CKB Cell Model、交易结构和 Fiber Network。
+## Current Focus
+
+- CKB development fundamentals
+- Cell Model
+- CKB-VM and transaction validation
+- Fiber and payment use cases
