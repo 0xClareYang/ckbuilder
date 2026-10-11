@@ -8,6 +8,7 @@ This repository documents my CKBuilder onboarding, CKB technical learning and pr
 
 - [Week 1 — OffCKB Setup and Test Contract Deployment](reports/week-01.md)
 - [Week 2 — Transfer CKB and Cell-Level Verification](reports/week-02.md)
+- [Week 3 — Store Data on Cell](reports/week-03.md)
 
 ## Current Progress
 
