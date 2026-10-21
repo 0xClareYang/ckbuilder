@@ -4,6 +4,8 @@
 
 This week's task was **Create a Fungible Token**: issuing, querying, and transferring xUDT on a local OffCKB Devnet.
 
+This exercise supports my focus on Web3 / AI Infrastructure Ecosystem Development. Building on my Web3 wallet and cross-chain research, ecosystem content, community work, technical events, and collaboration with developers and project teams, CKBuilder adds practical exposure to infrastructure workflows. The aim is to better understand builder prerequisites and adoption barriers so that technical knowledge can inform ecosystem research, developer education, community support, and partnerships. This week's experiment concerns CKB, not AI infrastructure.
+
 This record documents verified technical results and introductory study notes. Codex assisted with environment checks, local transaction execution, RPC verification, and preparing this record. It does not claim that I independently implemented the example or have mastered xUDT. Personal reflection and answers to the open questions remain to be added in my own words.
 
 ## 2. Sources and Environment
@@ -108,6 +110,48 @@ An OutPoint combines the creating transaction hash with an output index. The tra
 
 These notes are introductory explanations prepared with Codex assistance, not a claim of independent proficiency.
 
+### Connecting the Verified Cells to Ownership and Balances
+
+**Observed in this experiment:** the transfer consumed both issuance outputs: the 1,000,000-unit xUDT Cell at index `0x0` and the ordinary CKB change Cell at index `0x1`. It created three new outputs:
+
+| Transfer output | Holder | Raw token units | Capacity | Type/data |
+|---|---|---:|---|---|
+| `0x0` | Receiver | 123,456 | 146 CKB | Same xUDT Type Script; amount in data |
+| `0x1` | Issuer | 876,544 | 146 CKB | Same xUDT Type Script; amount in data |
+| `0x2` | Issuer | None | 41,999,596.99998015 CKB | No Type Script; empty data |
+
+**Mechanism explanation:** ownership is expressed by the spending conditions in a Cell's Lock Script. The complete Type Script (`code_hash`, `hash_type`, and `args`) identifies this token and applies its validation rules; its data carries the quantity. A holder's token balance can be calculated by summing decoded amounts across matching live token Cells controlled by that holder. This run ended with one matching token Cell for each holder; aggregation across several token Cells for the same holder was not exercised.
+
+The transfer did not change the old Cell's owner or subtract from its data in place. CKB consumes inputs and creates new outputs. The consumed token Cell contributed 1,000,000 units, which were redistributed as 123,456 units to the receiver and 876,544 units of token change. The ordinary CKB input supplied additional capacity so that two token outputs and a capacity-change output could be created. The capacity equation was checked separately from the token equation:
+
+```text
+Token units: 1,000,000 = 123,456 + 876,544
+Capacity (Shannon): 4,199,988,899,998,879 - 4,199,988,899,998,015 = 864 fee
+```
+
+### How the Existing RPC Evidence Can Be Checked
+
+**Executed and recorded:** the independent verifier used `get_transaction` for issuance and transfer, resolved every input's previous output, and queried outputs with `get_live_cell` and data included. The [saved JSON](../evidence/week-04-xudt-rpc-verification.json) records these fields and the verification checks. It is a saved verification record, not a complete node log or an unprocessed RPC transcript.
+
+For a local node retaining this same chain, the read-only calls are:
+
+```text
+get_transaction([issuance_transaction_hash])
+get_transaction([transfer_transaction_hash])
+get_live_cell([{ "tx_hash": transfer_transaction_hash, "index": "0x0" }, true])
+get_live_cell([{ "tx_hash": transfer_transaction_hash, "index": "0x1" }, true])
+```
+
+These are method/parameter sketches; substitute the full hashes from Section 4 and send them in JSON-RPC requests to the local proxy. Compare status and block hash, then compare each output's scripts, capacity, and data with the record. Decode the 16-byte quantities using integer arithmetic. Resolve all previous outputs before subtracting capacities. `unknown` by itself does not establish that a Cell was spent: here the transfer's exact input references establish consumption of the issuance outputs. Live states describe verification time and can change if later transactions spend the outputs.
+
+The local runner and verifier were used during the experiment but are not included in this public repository. Full command logs and a standalone reproduction bundle remain missing.
+
+### Connection to a Wallet Transfer
+
+**Mechanism explanation, not an additional wallet test:** a wallet would normally present a recipient, amount, fee, and resulting balance. On CKB, it can hide the underlying Cell selection, transaction signing, token-change output, and capacity-change output. This exercise exposes those steps: the receiver's balance becomes 123,456 units because a new live token Cell with that amount is locked to the receiver.
+
+The recorded values are raw integer units. A wallet may use token metadata to display a name, symbol, or decimal-adjusted balance; this experiment created none of that metadata. No wallet integration, wallet display behavior, multi-Cell holder balance, additional issuance, or xUDT extension behavior was tested. Those are further questions rather than verified outcomes.
+
 ## 7. Challenges and Solutions
 
 - The new shell did not expose npm or OffCKB. The existing portable Node.js v22.22.2 toolchain was reused through explicit paths.
@@ -132,4 +176,4 @@ The images are factual RPC extracts, not webpage screenshots. They contain no pr
 - Review the distinction between token conservation, capacity used to occupy state, and transaction fees.
 - Add a personal reflection and collect a private-key-free UI screenshot if needed for onboarding review.
 
-The next stage is to consolidate these points before choosing another practical exercise. No future task is recorded as completed.
+The next stage is to consolidate these points before choosing another practical exercise. A useful documentation follow-up would be a reproducible onboarding walkthrough that explains setup requirements, verification steps, and common failure points for new builders. This is a proposed application of the work, not a completed educational resource or a measured onboarding improvement. Personal reflection remains for me to add in my own words.
