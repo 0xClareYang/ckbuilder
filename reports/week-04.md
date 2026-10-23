@@ -174,4 +174,4 @@ The images are factual RPC extracts, not webpage screenshots. They contain no pr
 - Review the distinction between token conservation, capacity used to occupy state, and transaction fees.
 - Add a personal reflection and collect a private-key-free UI screenshot if needed for onboarding review.
 
-The next stage is to consolidate these points before choosing another practical exercise. A useful documentation follow-up would be a reproducible onboarding walkthrough that explains setup requirements, verification steps, and common failure points for new builders. This is a proposed application of the work, not a completed educational resource or a measured onboarding improvement. Personal reflection remains for me to add in my own words.
+The next stage is to consolidate these points before choosing another practical exercise. A useful documentation follow-up would be a reproducible onboarding walkthrough that explains setup requirements, verification steps, and common failure points for new builders. 
