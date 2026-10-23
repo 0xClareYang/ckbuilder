@@ -108,8 +108,6 @@ Little-endian encoding puts the least-significant byte first. For example, 1,000
 
 An OutPoint combines the creating transaction hash with an output index. The transfer hash plus `0x0` locates the receiver's token Cell; the same hash plus `0x1` locates the issuer's token change. `committed` establishes transaction inclusion, while `live` establishes that an output remains available to spend. Existing Cells are consumed and replaced; they are not edited in place.
 
-These notes are introductory explanations prepared with Codex assistance, not a claim of independent proficiency.
-
 ### Connecting the Verified Cells to Ownership and Balances
 
 **Observed in this experiment:** the transfer consumed both issuance outputs: the 1,000,000-unit xUDT Cell at index `0x0` and the ordinary CKB change Cell at index `0x1`. It created three new outputs:
