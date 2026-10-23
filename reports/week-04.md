@@ -6,7 +6,7 @@ This week's task was **Create a Fungible Token**: issuing, querying, and transfe
 
 This exercise supports my focus on Web3 / AI Infrastructure Ecosystem Development. Building on my Web3 wallet and cross-chain research, ecosystem content, community work, technical events, and collaboration with developers and project teams, CKBuilder adds practical exposure to infrastructure workflows. The aim is to better understand builder prerequisites and adoption barriers so that technical knowledge can inform ecosystem research, developer education, community support, and partnerships. This week's experiment concerns CKB, not AI infrastructure.
 
-This record documents verified technical results and introductory study notes. Codex assisted with environment checks, local transaction execution, RPC verification, and preparing this record. It does not claim that I independently implemented the example or have mastered xUDT. Personal reflection and answers to the open questions remain to be added in my own words.
+This record documents verified technical results and introductory study notes. Codex assisted with environment checks, local transaction execution, RPC verification, and preparing this record. It does not claim that I independently implemented the example or have mastered xUDT. 
 
 ## 2. Sources and Environment
 
