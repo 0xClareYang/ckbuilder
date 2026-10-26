@@ -6,7 +6,7 @@ My background includes Web3 wallet and cross-chain research, ecosystem content, 
 
 CKBuilder is a step from ecosystem research into hands-on technical learning. Through local experiments on Nervos CKB, I am exploring how transactions, storage, and custom tokens work beneath a wallet interface, what developers need to get started, and where they encounter adoption barriers. This technical understanding supports my ecosystem work; the goal is not a transition into protocol engineering.
 
-The experiments use official examples with Codex assistance, explicitly documented in Weeks 3–4. This repository covers the blockchain side of my broader Web3 / AI infrastructure direction; it contains no AI infrastructure experiments or production engineering claims.
+The exercises use official Nervos examples and coding-tool support. This repository covers the blockchain side of my broader Web3 / AI infrastructure direction.
 
 ## Learning Journey
 
@@ -16,10 +16,11 @@ The experiments use official examples with Codex assistance, explicitly document
 | 2 | Transfer of 62 CKB; 1 input and 2 outputs; actual fee 465 Shannon | [Transfer CKB](reports/week-02.md) | [RPC](evidence/week-02-transfer-ckb-rpc.png) · [UI](evidence/week-02-transfer-ckb-ui.png) |
 | 3 | Custom UTF-8 message stored and read back exactly; 111 CKB message Cell; fee 515 Shannon | [Store Data on Cell](reports/week-03.md) | [RPC](evidence/week-03-store-data-rpc.png) · [UI](evidence/week-03-store-data-ui.png) |
 | 4 | Issue 1,000,000 xUDT units; transfer 123,456; issuer retains 876,544; both transactions committed | [Create a Fungible Token](reports/week-04.md) | [Issue/query](evidence/week-04-xudt-issue-query-evidence.png) · [Transfer](evidence/week-04-xudt-transfer-evidence.png) · [RPC JSON](evidence/week-04-xudt-rpc-verification.json) |
+| 5 | Split 700,000 units across two Cells; spend both to return 650,000; 50,000 change | [Multi-Cell xUDT transfer](reports/week-05.md) | [Code](experiments/week-05/README.md) · [Run screenshot](evidence/week-05-xudt-run.png) · [JSON](evidence/week-05-xudt-result.json) |
 
-Weeks 1–2 used a Mac Devnet. Week 3 initialized a separate Windows Devnet, which Week 4 reused. All experiments used local development assets. Transaction hashes have no public explorer links; the reports preserve them for correlation with local evidence.
+Weeks 1–2 used a Mac Devnet. Week 3 initialized a separate Windows Devnet, reused in Weeks 4–5. All experiments used local development assets. Transaction hashes have no public explorer links; the reports preserve them for correlation with local evidence.
 
-Week 4 completed the transaction workflow through a local runner following the official example after browser automation was blocked. Its images are rendered extracts of actual RPC results. Webpage UI screenshots and personal reflection remain outstanding.
+Week 4 used a local runner after browser automation was blocked. Its images are rendered RPC extracts; webpage UI screenshots are still missing. Week 5 includes a screenshot of actual run output opened in Notepad.
 
 ## What the Evidence Shows
 
@@ -46,7 +47,7 @@ The recorded runs used **Node.js v22.22.2**, **npm 10.9.7**, and **OffCKB 0.4.13
 
 Weeks 2–4 record official source revision `e99f8f28e311570a85455c80cac0f1b121d8f2bf`. Week 4 also checked upstream revision `c205789868ced3f0972a01e18e2ad5e49b1aba3a` and found no relevant example changes. See the [versioned xUDT example](https://github.com/nervosnetwork/docs.nervos.org/tree/e99f8f28e311570a85455c80cac0f1b121d8f2bf/examples/dApp/xudt) and each report for its source and environment.
 
-The repository contains reports and evidence, not a packaged application. Local runner scripts, full execution logs, and Devnet chain data are not included. The recorded versions and upstream examples provide a starting point for reproduction; reproducing the exercise creates new transactions and hashes. A complete reproduction bundle remains a next step.
+The [Week 5 experiment](experiments/week-05/README.md) includes a runner, saved data, and read-only checks. Its offline mode needs only Node.js; its RPC mode needs the original local chain. Transaction-building currently requires the Week 4 fixtures. Earlier runner scripts, full execution logs, and Devnet chain data are not included. A fresh-chain setup remains a next step.
 
 ## Connection to Ecosystem Development
 
@@ -60,13 +61,14 @@ CKB-specific research here is introductory and centered on official Nervos mater
 
 Recorded challenges include RPC availability, an Intel macOS debugger compatibility issue, Windows toolchain discovery, and generated system-script configuration. Week 4 also records dependency audit findings without claiming they were resolved.
 
-- Add personal reflections and answer the Week 4 questions in my own words.
+- Continue working through xUDT authorization and wallet behavior.
 - Collect private-key-free Week 4 UI evidence if required by onboarding review.
-- Prepare a reviewed reproduction bundle with safe commands and verification scripts.
+- Extend the Week 5 runner with a fresh-chain setup.
 - Study xUDT issuance authorization and extension flags; neither additional issuance nor extensions were tested.
 - Continue studying CKB-VM, then choose a concrete Fiber or payment exercise.
 
 ## Start Reading
 
 - [Week 1](reports/week-01.md) → [Week 2](reports/week-02.md) → [Week 3](reports/week-03.md) → [Week 4](reports/week-04.md)
+- [Week 5 — Multi-Cell xUDT transfer](reports/week-05.md)
 - [Official CKB documentation](https://docs.nervos.org/) · [OffCKB](https://docs.nervos.org/docs/sdk-and-devtool/offckb)

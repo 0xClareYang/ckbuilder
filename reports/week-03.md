@@ -4,7 +4,7 @@
 
 This week, I completed the official Nervos **Store Data on Cell** exercise on a local OffCKB Devnet. The goal was to write a custom UTF-8 message into a Cell, locate that Cell by its OutPoint, and verify the stored data independently through RPC.
 
-Codex assisted with the environment setup, the example workflow, evidence capture, and RPC verification. I reviewed the resulting transaction and used the verified fields below to develop my initial understanding of Cell data.
+The example's Read function and a separate RPC query both returned the message stored in the Cell.
 
 ## 2. Source and Environment
 
@@ -26,11 +26,11 @@ This was a newly initialized Devnet on Windows. It was separate from the Week 2 
 - Ran the official example at `http://localhost:1234`.
 - Wrote the message `CKBuilder Week 3 - Store Data on Cell - Clare Yang`.
 - Waited for the transaction to be committed and used the page's Read function.
-- Confirmed that the message read from the Cell exactly matched the original text.
-- Independently queried the transaction and Output 0 through the local RPC.
+- Compared the returned message with the original text.
+- Queried the transaction and Output 0 through the local RPC.
 - Calculated the actual fee with exact integer capacity arithmetic across all inputs and outputs.
 
-## 4. Verified Result
+## 4. Result
 
 - Original and decoded message: `CKBuilder Week 3 - Store Data on Cell - Clare Yang`
 - Transaction hash:
@@ -71,7 +71,7 @@ Capacity and data serve different purposes. Capacity represents the Cell's CKB-d
 
 The Windows environment did not contain the Week 2 Mac checkout, npm, OffCKB, or Devnet data. A checksum-verified portable Node.js installation and a task-local OffCKB installation were used, and a new local-only Windows Devnet was initialized. No system PATH or administrator configuration was changed.
 
-The official example displayed its Devnet private-key field as plain text. The final UI evidence was captured from a result-only viewport that excluded the private-key field. Both evidence images were checked before publication and contain no private key or authentication information.
+The example displayed its Devnet private-key field as plain text, so the UI screenshot was limited to the result area below it.
 
 The example's startup synchronization temporarily updated `system-scripts.json` for the active Devnet. That generated change was restored after the run, leaving the official source checkout clean at the recorded revision.
 
@@ -84,4 +84,4 @@ The example's startup synchronization temporarily updated `system-scripts.json` 
 
 - Follow the official **Create a Fungible Token** tutorial.
 - Record the token Cell structure, transaction results, and verification evidence.
-- Continue documenting errors and solutions without treating planned work as completed.
+- Keep notes on errors and solutions.

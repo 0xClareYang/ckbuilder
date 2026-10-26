@@ -10,7 +10,7 @@ This week, I started the CKBuilder onboarding process and focused on setting up 
 - Installed OffCKB 0.4.13.
 - Started a local CKB Devnet.
 - Deployed the `hello-world.bc` test contract.
-- Confirmed that the deployment transaction was committed.
+- Waited for the deployment transaction to reach `committed`.
 - Ran the included tests successfully.
 - Created a public GitHub repository for documenting my CKBuilder learning.
 - Shared the repository link and completion screenshot with the CKBuilder coordinator, Neon.
@@ -39,15 +39,15 @@ This transaction was deployed on a local Devnet, so it does not have a public bl
 
 ## 5. Problems and Solutions
 
-The initial Devnet terminal session exited before the first deployment attempt, which caused a `fetch failed` error because the local RPC and proxy ports were no longer listening. I restarted `offckb node`, waited for the Devnet to become ready, verified the local RPC and then deployed the contract successfully without cleaning the chain data.
+The Devnet terminal session exited before the first deployment attempt, causing a `fetch failed` error. After restarting `offckb node` and checking the local RPC, the deployment succeeded. The chain data was kept.
 
 On Intel macOS, the latest `ckb-debugger` release did not provide a compatible prebuilt binary. I used the compatible official `ckb-standalone-debugger` v1.0.0 release for Intel macOS and verified its checksum before installing it in OffCKB's user-level tool directory.
 
 ## 6. What I Learned
 
-I gained an initial understanding of how OffCKB provides a local development environment for CKB. I also learned the basic workflow of starting a Devnet, deploying a test contract, confirming transaction status and preserving evidence of the process.
+This was my first run through the local CKB workflow: start a Devnet, deploy a test contract, check its transaction status, and save the result.
 
-My current understanding is still introductory. I have not yet developed a sufficiently detailed understanding of the Cell Model or CKB-VM, so those will be the focus of the next stage.
+The Cell Model and CKB-VM are the next concepts to work through.
 
 ## 7. Plan for Next Week
 

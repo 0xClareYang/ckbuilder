@@ -1,0 +1,10 @@
+CKBUILDER WEEK 5 - MULTI-CELL xUDT
+Split: 0xc4e8b6aa4bc5c087f76801ccea32897463354648a3960e26c3aa35d5a711a73a committed
+Transfer: 0x685a9f2f2c1f719db971d4d25ba48ab279aff5ce2f7c8cb24c558d197a698391 committed
+Transfer inputs/outputs: 3/3; token inputs: 2
+Two token inputs: 300000 + 400000; returned: 650000; learner change: 50000
+Issuer balance: 826544 in two token Cells
+Total token units: 1000000
+Fees (Shannon): split=1187; transfer=908
+Both fragments consumed; new token outputs live at snapshot time.
+Read-only RPC recheck passed.

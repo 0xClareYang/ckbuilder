@@ -11,9 +11,9 @@ My goal was to understand a CKB transfer at the Cell level: how an input Cell is
 - Ran the official Nervos `simple-transfer` example.
 - Used the local OffCKB Devnet configured during Week 1.
 - Transferred `62 CKB` between two pre-funded Devnet accounts.
-- Confirmed through RPC that the transaction reached the `committed` state.
+- Checked the transaction's `committed` status through RPC.
 - Checked the sender and receiver balances before and after the transfer.
-- Verified the state of the original input Cell and both new output Cells.
+- Queried the original input Cell and both new output Cells.
 - Recorded the transaction hash, block hash, fee, balance changes, and supporting screenshots.
 
 Official tutorial:
@@ -44,7 +44,7 @@ Official example revision:
 - Output Cells: `2`
 - Actual transaction fee: `465 Shannon` (`0.00000465 CKB`)
 
-The example page displays `Tx fee: 0.001 CKB` as fixed interface text. The transaction is built with `completeFeeBy(signer, 1000)`, and the actual fee for this transaction was verified from the difference between its input and output capacities.
+The page displays `Tx fee: 0.001 CKB` as fixed text. The code uses `completeFeeBy(signer, 1000)`, but the fee actually paid comes from input capacity minus output capacity: `465 Shannon` in this run.
 
 Because this transaction was completed on a local Devnet, it does not have a public block explorer URL.
 
@@ -79,7 +79,7 @@ The first balance query returned `fetch failed`. Direct and proxy RPC health che
 
 The standard browser-control component could not start because of a local sandbox error. I used an isolated headless Chrome profile to run the official example and changed the private-key field to password display before capturing the screenshot.
 
-The example interface waits a fixed 10 seconds and displays the balance as an integer number of CKB. I therefore verified the final balances and transaction status independently with OffCKB balance queries and the Devnet `get_transaction` RPC.
+The interface waits a fixed 10 seconds and rounds the balance to whole CKB. OffCKB balance queries and `get_transaction` provided the precise balances and transaction status.
 
 The Devnet data was preserved, and I did not run `offckb clean`.
 
