@@ -1,0 +1,8 @@
+CKBuilder Week 6 - Spore text object
+Transaction: 0x24ff7c3f51f98e5a4d0bd4648f927a94b08dad8d7ca33042e19c1593163b6ef8 committed
+Block: 0x2a01a92f2d2e89b0ca10ff9ea9c688cfe10e559569ea77d98c68d2f72acedb8a
+Spore ID: 0xbd4b1047a969a66aef8026e98d2540b324e25568a0383dc759f0bb077955e30e
+Cell: 0x0 live; capacity 21300000000 Shannon
+Data: text/plain decoded exactly: CKBuilder Week 6 - Spore digital object - Clare Yang
+Inputs/outputs: 2/2 fee: 1013 Shannon
+Transaction output data matches live Cell data.

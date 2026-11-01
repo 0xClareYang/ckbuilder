@@ -1,0 +1,99 @@
+{
+  "hash": "0x24ff7c3f51f98e5a4d0bd4648f927a94b08dad8d7ca33042e19c1593163b6ef8",
+  "outputIndex": 0,
+  "message": "CKBuilder Week 6 - Spore digital object - Clare Yang",
+  "sourceRevision": "e99f8f28e311570a85455c80cac0f1b121d8f2bf",
+  "node": "v22.22.2",
+  "network": "local OffCKB Devnet",
+  "status": "committed",
+  "blockHash": "0x2a01a92f2d2e89b0ca10ff9ea9c688cfe10e559569ea77d98c68d2f72acedb8a",
+  "outPoint": {
+    "tx_hash": "0x24ff7c3f51f98e5a4d0bd4648f927a94b08dad8d7ca33042e19c1593163b6ef8",
+    "index": "0x0"
+  },
+  "live": "live",
+  "sporeId": "0xbd4b1047a969a66aef8026e98d2540b324e25568a0383dc759f0bb077955e30e",
+  "output": {
+    "capacity": "0x4f5943500",
+    "lock": {
+      "args": "0x8e42b1999f265a0078503c4acec4d5e134534297",
+      "code_hash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8",
+      "hash_type": "type"
+    },
+    "type": {
+      "args": "0xbd4b1047a969a66aef8026e98d2540b324e25568a0383dc759f0bb077955e30e",
+      "code_hash": "0x7e8bf78a62232caa2f5d47e691e8db1a90d05e93dc6828ad3cb935c01ec6d208",
+      "hash_type": "data2"
+    }
+  },
+  "data": "0x56000000100000001e000000560000000a000000746578742f706c61696e34000000434b4275696c646572205765656b2036202d2053706f7265206469676974616c206f626a656374202d20436c6172652059616e67",
+  "contentType": "text/plain",
+  "decodedText": "CKBuilder Week 6 - Spore digital object - Clare Yang",
+  "contentHex": "0x434b4275696c646572205765656b2036202d2053706f7265206469676974616c206f626a656374202d20436c6172652059616e67",
+  "inputs": [
+    {
+      "outPoint": {
+        "index": "0x0",
+        "tx_hash": "0x162ac11c9956fe2227de0b26afe806c8109fe7a2ef0322feb3db7a1164db8bcc"
+      },
+      "output": {
+        "capacity": "0x2959c8f00",
+        "lock": {
+          "args": "0x8e42b1999f265a0078503c4acec4d5e134534297",
+          "code_hash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8",
+          "hash_type": "type"
+        },
+        "type": null
+      }
+    },
+    {
+      "outPoint": {
+        "index": "0x4",
+        "tx_hash": "0xc4e8b6aa4bc5c087f76801ccea32897463354648a3960e26c3aa35d5a711a73a"
+      },
+      "output": {
+        "capacity": "0xeebcbdd70d49c",
+        "lock": {
+          "args": "0x8e42b1999f265a0078503c4acec4d5e134534297",
+          "code_hash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8",
+          "hash_type": "type"
+        },
+        "type": null
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "capacity": "0x4f5943500",
+      "lock": {
+        "args": "0x8e42b1999f265a0078503c4acec4d5e134534297",
+        "code_hash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8",
+        "hash_type": "type"
+      },
+      "type": {
+        "args": "0xbd4b1047a969a66aef8026e98d2540b324e25568a0383dc759f0bb077955e30e",
+        "code_hash": "0x7e8bf78a62232caa2f5d47e691e8db1a90d05e93dc6828ad3cb935c01ec6d208",
+        "hash_type": "data2"
+      }
+    },
+    {
+      "capacity": "0xeebc97d792aa7",
+      "lock": {
+        "args": "0x8e42b1999f265a0078503c4acec4d5e134534297",
+        "code_hash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8",
+        "hash_type": "type"
+      },
+      "type": null
+    }
+  ],
+  "outputsData": [
+    "0x56000000100000001e000000560000000a000000746578742f706c61696e34000000434b4275696c646572205765656b2036202d2053706f7265206469676974616c206f626a656374202d20436c6172652059616e67",
+    "0x"
+  ],
+  "inputCount": 2,
+  "outputCount": 2,
+  "inputCapacity": "4199921599996828",
+  "outputCapacity": "4199921599995815",
+  "feeShannon": "1013",
+  "checkedAt": "2026-11-01T11:09:24.922Z"
+}
