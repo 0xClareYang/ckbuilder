@@ -1,0 +1,7 @@
+Week 7: Spore ownership transfer
+Transaction: 0x295298861c0a69c41843685ea4a352a58cc3271021210b01462197735950749c committed Block: 0x7923151d354f86c818fb3e8489bcba3e7a003ffbcb67a478b6eb2124f885dabc
+Spore ID: 0xbd4b1047a969a66aef8026e98d2540b324e25568a0383dc759f0bb077955e30e
+Old Cell: unknown (referenced by the committed transfer input)
+New Cell: 0x0 live recipient lock args: 0x758d311c8483e0602dfad7b69d9053e3f917457d
+Decoded: CKBuilder Week 6 - Spore digital object - Clare Yang
+Capacity: 21300000000 Shannon; inputs/outputs: 2/2 fee: 1058 Shannon

@@ -18,6 +18,7 @@ The exercises use official Nervos examples and coding-tool support. This reposit
 | 4 | Issue 1,000,000 xUDT units; transfer 123,456; issuer retains 876,544; both transactions committed | [Create a Fungible Token](reports/week-04.md) | [Issue/query](evidence/week-04-xudt-issue-query-evidence.png) · [Transfer](evidence/week-04-xudt-transfer-evidence.png) · [RPC JSON](evidence/week-04-xudt-rpc-verification.json) |
 | 5 | Split 700,000 units across two Cells; spend both to return 650,000; 50,000 change | [Multi-Cell xUDT transfer](reports/week-05.md) | [Code](experiments/week-05/README.md) · [Run screenshot](evidence/week-05-xudt-run.png) · [JSON](evidence/week-05-xudt-result.json) |
 | 6 | Create a Spore text object; retrieve and decode its live Cell; fee 1,013 Shannon | [Spore digital object](reports/week-06.md) | [Code](experiments/week-06/README.md) · [RPC data](evidence/week-06-spore.json) |
+| 7 | Transfer the Week 6 Spore to another account with its ID, payload, and 213 CKB capacity intact | [Spore ownership transfer](reports/week-07.md) | [Code](experiments/week-07/README.md) · [RPC data](evidence/week-07-spore-transfer.json) |
 
 Weeks 1–2 used a Mac Devnet. Week 3 initialized a separate Windows Devnet, reused in Weeks 4–5. All experiments used local development assets. Transaction hashes have no public explorer links; the reports preserve them for correlation with local evidence.
 
@@ -73,4 +74,5 @@ Recorded challenges include RPC availability, an Intel macOS debugger compatibil
 - [Week 1](reports/week-01.md) → [Week 2](reports/week-02.md) → [Week 3](reports/week-03.md) → [Week 4](reports/week-04.md)
 - [Week 5 — Multi-Cell xUDT transfer](reports/week-05.md)
 - [Week 6 — Spore text digital object](reports/week-06.md)
+- [Week 7 — Spore ownership transfer](reports/week-07.md)
 - [Official CKB documentation](https://docs.nervos.org/) · [OffCKB](https://docs.nervos.org/docs/sdk-and-devtool/offckb)
